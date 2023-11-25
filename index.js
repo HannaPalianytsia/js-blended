@@ -27,8 +27,10 @@
 //     * /
 
 
-const namber = 70;
+const namber = prompt("Enter number");
 const oneOver = 60;
 const over = Math.floor(namber / oneOver);
+const modifyOver = String(over).padStart(2,"0");
 const minute = namber % oneOver;
-console.log(`${over}:${minute}`);
+const modifyMin = String(minute).padStart(2, "0");
+alert(`${modifyOver}:${modifyMin}`);
