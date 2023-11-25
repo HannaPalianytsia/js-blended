@@ -26,11 +26,21 @@
 // 70 === 01: 10
 //     * /
 
-
+/*
 const namber = prompt("Enter number");
 const oneOver = 60;
 const over = Math.floor(namber / oneOver);
 const modifyOver = String(over).padStart(2,"0");
 const minute = namber % oneOver;
 const modifyMin = String(minute).padStart(2, "0");
-alert(`${modifyOver}:${modifyMin}`);
+alert(`${modifyOver}:${modifyMin}`);*/
+
+/**
+ *? Напишіть цикл, який виводить у консоль
+ *? всі парні числа  від max до min  за спаданням
+ */
+
+const max = 50;
+const min = 23;
+
+for (let i = max; i >= min; i--){if (i % 2===0){console.log(i)} }
