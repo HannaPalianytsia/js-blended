@@ -78,16 +78,99 @@ alert(`${modifyOver}:${modifyMin}`);*/
  *? ключ: значення використовуючи Object.keys() і for...of
  */
 
-const user = {
-    name: "John",
-    age: 20,
-    hobby: "tennis",
-    premium: true,
-};
-user.mood = "happy";
-user.hobby = "skydiving";
-user.premium = false;
-const keys = Object.keys(user)
-for (const key of keys) {
-    console.log(`${key}: ${user[key]}`)
+// const user = {
+//     name: "John",
+//     age: 20,
+//     hobby: "tennis",
+//     premium: true,
+// };
+// user.mood = "happy";
+// user.hobby = "skydiving";
+// user.premium = false;
+// const keys = Object.keys(user)
+// for (const key of keys) {
+//     console.log(`${key}: ${user[key]}`)
+// }
+
+
+
+/*OLEKSA*/
+
+/**
+ *? Напишіть ф-цію calcTotalPrice(someStones, stonesName),
+ *? яка приймає масив об'єктів та
+ *? рядок під назвою каменю.
+ *? Функція рахує та повертає загальну вартість каменів
+ *? з таким ім'ям, ціною та кількістю з об'єкта
+ */
+
+
+// const stones = [
+//   { name: "Изумруд", price: 1300, quantity: 4 },
+//   { name: "Бриллиант", price: 2700, quantity: 6 },
+//   { name: "Сапфир", price: 400, quantity: 7 },
+//   { name: "Щебень", price: 150, quantity: 100 },
+// ];
+
+// function calcTotalPrice(someStones, stonesName) {
+//   for (const stone of someStones) {
+//     if (stone.name === stonesName) return stone.price * stone.quantity;
+//   }
+//   return "Камінь не знайдено";
+// }
+// console.log(calcTotalPrice(stones, "Щебен"));
+
+// /*MAXIM*/
+
+// /* Напишіть функцію, яка приймає об'єкт і рахує загальну суму зарплат працівників. */
+
+
+
+// const someObj = {
+//   worker1: 360,
+//   worker2: 750,
+//   worker3: 240,
+// };
+
+// function totalSallary(obj) {
+//     const sallaryArray = Object.values(obj) 
+//     let total = 0;
+//     for (const index of sallaryArray) {
+//         total += index
+//     }
+//     return total;
+// }
+
+// console.log(totalSallary(someObj));
+
+
+///**
+// *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
+// *? Зробіть знижку 20 % на всі фрукти у масиві
+// *? Надайте ід для кожного продукту
+// */
+
+const fruits = [
+  { name: "apple", price: 200 },
+  { name: "orange", price: 300 },
+  { name: "grapes", price: 750 },
+];
+
+function fruitsTotal(arr) {
+    const newArray = [];
+    let id = 1;
+    for (let item of arr) {
+        const newFruit = {
+            ...item,
+            price: item.price * 0.8,
+            id,
+        };
+        
+        newArray.push(newFruit);
+        id += 1;
+    }
+    return newArray
 }
+
+console.log(fruitsTotal(fruits));
+console.log(fruits);
