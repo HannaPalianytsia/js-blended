@@ -189,8 +189,6 @@ alert(`${modifyOver}:${modifyMin}`);*/
 
 // console.log(string);
 
-
-
 ///**
 // *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
 // *? Зробіть знижку 20 % на всі фрукти у масиві
@@ -203,7 +201,6 @@ alert(`${modifyOver}:${modifyMin}`);*/
 //   { name: "grapes", price: 750 },
 // ];
 
-
 //============== 1 =======================================
 // function arrayChanges(arr) {
 //   return arr.map((elem, index) => {
@@ -215,11 +212,10 @@ alert(`${modifyOver}:${modifyMin}`);*/
 //   })
 // }
 
-
 //============== 2 =======================================
 
 // const arrayChanges = (arr) =>
-//   arr.map((elem, index) => 
+//   arr.map((elem, index) =>
 //      ({
 //       ...elem,
 //       price: elem.price * 0.8,
@@ -281,7 +277,6 @@ alert(`${modifyOver}:${modifyMin}`);*/
  *? доступ до яких зроби через геттер та сеттер login email
  */
 
-
 // class Client {
 //   #login;
 //   #email;
@@ -306,6 +301,42 @@ alert(`${modifyOver}:${modifyMin}`);*/
 // const newClient = new Client("fvfv", "gfgf");
 // console.log(newClient.login)
 // console.log(newClient.login = "trtr")
+
+function checkBrackets(string) {
+  const testArr = string.split("");
+  const rounOpen = [];
+  const rounClose = [];
+  const squareOpen = [];
+  const squareClose = [];
+  const figureOpen = [];
+  const figureClose = [];
+
+  for (let i = 0; i < testArr.length; i++) {
+    if (testArr[i] === "(") {
+      rounOpen.push(testArr[i]);
+    }
+    if (testArr[i] === "(") {
+      rounClose.push(testArr[i]);
+    }
+    if (testArr[i] === "[") {
+      squareOpen.push(testArr[i]);
+    }
+    if (testArr[i] === "]") {
+      squareClose.push(testArr[i]);
+    }
+    if (testArr[i] === "{") {
+      figureOpen.push(testArr[i]);
+    }
+    if (testArr[i] === "}") {
+      figureClose.push(testArr[i]);
+    }
+  }
+  return (
+    rounOpen.length === rounClose.length &&
+    squareOpen.length === squareClose.length &&
+    figureOpen.length === figureClose.length
+  );
+}
 
 /*Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn)
   і перевіряє правильність закриття дужок () {} []
