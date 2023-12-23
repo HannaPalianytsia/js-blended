@@ -67,7 +67,6 @@ alert(`${modifyOver}:${modifyMin}`);*/
 // }
 // alert(`Загальна сума введених чисел дорівнює ${total}.`);
 
-
 /**
  *? Напиши скрипт для об'єкта user,
  *? послідовно:
@@ -92,8 +91,6 @@ alert(`${modifyOver}:${modifyMin}`);*/
 //     console.log(`${key}: ${user[key]}`)
 // }
 
-
-
 /*OLEKSA*/
 
 /**
@@ -103,7 +100,6 @@ alert(`${modifyOver}:${modifyMin}`);*/
  *? Функція рахує та повертає загальну вартість каменів
  *? з таким ім'ям, ціною та кількістю з об'єкта
  */
-
 
 // const stones = [
 //   { name: "Изумруд", price: 1300, quantity: 4 },
@@ -124,8 +120,6 @@ alert(`${modifyOver}:${modifyMin}`);*/
 
 // /* Напишіть функцію, яка приймає об'єкт і рахує загальну суму зарплат працівників. */
 
-
-
 // const someObj = {
 //   worker1: 360,
 //   worker2: 750,
@@ -133,7 +127,7 @@ alert(`${modifyOver}:${modifyMin}`);*/
 // };
 
 // function totalSallary(obj) {
-//     const sallaryArray = Object.values(obj) 
+//     const sallaryArray = Object.values(obj)
 //     let total = 0;
 //     for (const index of sallaryArray) {
 //         total += index
@@ -143,34 +137,54 @@ alert(`${modifyOver}:${modifyMin}`);*/
 
 // console.log(totalSallary(someObj));
 
-
 ///**
 // *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
 // *? Зробіть знижку 20 % на всі фрукти у масиві
 // *? Надайте ід для кожного продукту
 // */
 
-const fruits = [
-  { name: "apple", price: 200 },
-  { name: "orange", price: 300 },
-  { name: "grapes", price: 750 },
-];
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
 
-function fruitsTotal(arr) {
-    const newArray = [];
-    let id = 1;
-    for (let item of arr) {
-        const newFruit = {
-            ...item,
-            price: item.price * 0.8,
-            id,
-        };
-        
-        newArray.push(newFruit);
-        id += 1;
-    }
-    return newArray
-}
+// function fruitsTotal(arr) {
+//     const newArray = [];
+//     let id = 1;
+//     for (let item of arr) {
+//         const newFruit = {
+//             ...item,
+//             price: item.price * 0.8,
+//             id,
+//         };
 
-console.log(fruitsTotal(fruits));
-console.log(fruits);
+//         newArray.push(newFruit);
+//         id += 1;
+//     }
+//     return newArray
+// }
+
+// console.log(fruitsTotal(fruits));
+// console.log(fruits);
+
+//***************** */
+// напиши код який із массиву arr видаляє елемент foo.
+// розвертає цей массив
+// і повертає рядок js is the best
+// вхідний массив не має змінюватись (мутується)
+
+const arr = ["best", "the", "foo", "is", "js"];
+// const arrd = [...arr];
+// arrd.splice(arrd.indexOf("foo"), 1);
+// arrd.reverse();
+// console.log(arrd.join(" "));
+// console.log(arr);
+
+const string = arr
+  .slice(0, arr.indexOf("foo"))
+  .concat(arr.slice(arr.indexOf("foo") + 1, arr.length))
+  .reverse()
+  .join(" ");
+
+console.log(string);
