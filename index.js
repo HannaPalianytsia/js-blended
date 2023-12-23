@@ -174,17 +174,56 @@ alert(`${modifyOver}:${modifyMin}`);*/
 // і повертає рядок js is the best
 // вхідний массив не має змінюватись (мутується)
 
-const arr = ["best", "the", "foo", "is", "js"];
-// const arrd = [...arr];
-// arrd.splice(arrd.indexOf("foo"), 1);
-// arrd.reverse();
-// console.log(arrd.join(" "));
-// console.log(arr);
+// const arr = ["best", "the", "foo", "is", "js"];
+// // const arrd = [...arr];
+// // arrd.splice(arrd.indexOf("foo"), 1);
+// // arrd.reverse();
+// // console.log(arrd.join(" "));
+// // console.log(arr);
 
-const string = arr
-  .slice(0, arr.indexOf("foo"))
-  .concat(arr.slice(arr.indexOf("foo") + 1, arr.length))
-  .reverse()
-  .join(" ");
+// const string = arr
+//   .slice(0, arr.indexOf("foo"))
+//   .concat(arr.slice(arr.indexOf("foo") + 1, arr.length))
+//   .reverse()
+//   .join(" ");
 
-console.log(string);
+// console.log(string);
+
+
+
+///**
+// *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
+// *? Зробіть знижку 20 % на всі фрукти у масиві
+// *? Надайте ід для кожного продукту
+// */
+
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
+
+
+//============== 1 =======================================
+// function arrayChanges(arr) {
+//   return arr.map((elem, index) => {
+//     return {
+//       ...elem,
+//       price: elem.price * 0.8,
+//       id: index + 1,
+//     };
+//   })
+// }
+
+
+//============== 2 =======================================
+
+// const arrayChanges = (arr) =>
+//   arr.map((elem, index) => 
+//      ({
+//       ...elem,
+//       price: elem.price * 0.8,
+//       id: index + 1,
+//   }))
+
+//   console.log(arrayChanges(fruits));
