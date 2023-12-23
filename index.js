@@ -251,25 +251,71 @@ alert(`${modifyOver}:${modifyMin}`);*/
 
 //   console.log(result)
 
-  /**
+/**
 *? Поверніть об'єкт, в якому вказано кількість тегів.
 *? Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
 
+*/
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
+
+// const newArr = tweets.flatMap(item => {
+//   return item.tags
+// });
+
+// const result = newArr.reduce((acc, item) => {
+// console.log(acc);
+//   return { ...acc, [item]: acc[item] ? acc[item]+1 : 1 }
+// }, {})
+// console.log(result);
+
+/**
+ *? Напиши клас Client який створює об'єкт
+ *? з ​​властивостями login email
+ *? Оголоси приватні властивості #login #email,
+ *? доступ до яких зроби через геттер та сеттер login email
  */
-const tweets = [
-  { id: "000", likes: 5, tags: ["js", "nodejs"] },
-  { id: "001", likes: 2, tags: ["html", "css"] },
-  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
-  { id: "003", likes: 8, tags: ["css", "react"] },
-  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
-];
 
-const newArr = tweets.flatMap(item => {
-  return item.tags
-});
 
-const result = newArr.reduce((acc, item) => {
-console.log(acc);
-  return { ...acc, [item]: acc[item] ? acc[item]+1 : 1 }
-}, {})
-console.log(result);
+// class Client {
+//   #login;
+//   #email;
+//   constructor(login, email) {
+//     this.#login = login;
+//     this.#email = email;
+//   }
+//   get login() {
+//     return this.#login
+//   }
+//   set login(newLogin) {
+//     this.#login = newLogin;
+//   }
+
+//   get email() {
+//     return this.#email
+//   }
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+// const newClient = new Client("fvfv", "gfgf");
+// console.log(newClient.login)
+// console.log(newClient.login = "trtr")
+
+/*Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn)
+  і перевіряє правильність закриття дужок () {} []
+  Якщо рядок містить коректний код функція повертає true.
+  В іншому випадку повертає false
+*/
+
+const someFn = `function foo() {
+  const arr = [1, 2, 3];
+  console.log(arr);
+}`;
+
+console.log(checkBrackets(someFn));
