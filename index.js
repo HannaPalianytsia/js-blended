@@ -78,7 +78,7 @@ const doubleBtnRef = document.querySelector("#double");
 const listItemRef = document.querySelectorAll(".listItem");
 
 doubleBtnRef.addEventListener("click", () => {
-  listItemRef.forEach((element) => {
+  listItemRef.forEach((element) => { 
     element.textContent = BigInt(element.textContent) ** 2n;
   });
 });
