@@ -61,29 +61,35 @@
 Завдання 4
 Кнопка "Зменшити" робить квадрат менше на 10 пікселів,  "Збільшити" - більше на 10 пікселів.
 */
-const decreaseBtnRef = document.querySelector("#decrease");
-const increaseBtnRef = document.querySelector("#increase");
-const boxDivRef = document.querySelector("#box");
+// const decreaseBtnRef = document.querySelector("#decrease");
+// const increaseBtnRef = document.querySelector("#increase");
+// const boxDivRef = document.querySelector("#box");
 
-decreaseBtnRef.addEventListener("click", onDecreaseBtnClick);
-increaseBtnRef.addEventListener("click", onIncreaseBtnClick);
+// decreaseBtnRef.addEventListener("click", onDecreaseBtnClick);
+// increaseBtnRef.addEventListener("click", onIncreaseBtnClick);
 
-function onDecreaseBtnClick() {
-  const size = parseInt(getComputedStyle(boxDivRef).width);
-  boxDivRef.style.width = size - 10 + "px";
-  boxDivRef.style.height = size - 10 + "px";
-}
-function onIncreaseBtnClick() {
-  const size = parseInt(getComputedStyle(boxDivRef).width);
-  boxDivRef.style.width = size + 10 + "px";
-  boxDivRef.style.height = size + 10 + "px";
-}
+// function onDecreaseBtnClick() {
+//   const size = parseInt(getComputedStyle(boxDivRef).width);
+//   boxDivRef.style.width = size - 10 + "px";
+//   boxDivRef.style.height = size - 10 + "px";
+// }
+// function onIncreaseBtnClick() {
+//   const size = parseInt(getComputedStyle(boxDivRef).width);
+//   boxDivRef.style.width = size + 10 + "px";
+//   boxDivRef.style.height = size + 10 + "px";
+// }
 
 //TODO:==============================================
 /*
 Завдання 5
 Додайте слухач кліку на window і визначте чи клікнув користувач у дів з id="place".
 */
+addEventListener('click',(event) => {
+  if (event.target.id === 'place') {
+    console.log(true);
+  }
+    
+})
 
 //TODO:==============================================
 /*
