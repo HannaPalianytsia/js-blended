@@ -3,14 +3,14 @@
 Завдання 1
 Натискання на кнопку "SHOW ME" має виводити значення з поля введення (дивіться на елементи в html-розмітці)
 */
-const alertButtonRef = document.querySelector("#alertButton"); // Ref або El
-const alertInputRef = document.querySelector("#alertInput");
+// const alertButtonRef = document.querySelector("#alertButton"); // Ref або El
+// const alertInputRef = document.querySelector("#alertInput");
 
-alertButtonRef.addEventListener("click", onAlertButtonClick);
+// alertButtonRef.addEventListener("click", onAlertButtonClick);
 
-function onAlertButtonClick() {
-    alert(alertInputRef.value);
-}
+// function onAlertButtonClick() {
+//     alert(alertInputRef.value);
+// }
 
 
 //TODO:==============================================
@@ -19,6 +19,22 @@ function onAlertButtonClick() {
 Після натискання кнопки "SWAP ME" здійснюється обмін вмістом між двома інпутами.
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 */
+
+const inputLeftRef = document.querySelector('#leftSwapInput');
+const inputRightRef = document.querySelector('#rightSwapInput');
+const btnSwapRef = document.querySelector('#swapButton');
+
+btnSwapRef.addEventListener("click", onBtnSwapClick)
+
+function onBtnSwapClick() { 
+  const inputLeftValue = inputLeftRef.value;
+  const inputRightValue = inputRightRef.value;
+
+  inputLeftRef.value = inputRightValue;
+  inputRightRef.value = inputLeftValue;
+  
+}
+
 
 //TODO:==============================================
 /*
