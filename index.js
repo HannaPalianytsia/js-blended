@@ -12,7 +12,6 @@
 //     alert(alertInputRef.value);
 // }
 
-
 //TODO:==============================================
 /*
 Завдання 2
@@ -20,21 +19,20 @@
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 */
 
-const inputLeftRef = document.querySelector('#leftSwapInput');
-const inputRightRef = document.querySelector('#rightSwapInput');
-const btnSwapRef = document.querySelector('#swapButton');
+// const inputLeftRef = document.querySelector('#leftSwapInput');
+// const inputRightRef = document.querySelector('#rightSwapInput');
+// const btnSwapRef = document.querySelector('#swapButton');
 
-btnSwapRef.addEventListener("click", onBtnSwapClick)
+// btnSwapRef.addEventListener("click", onBtnSwapClick)
 
-function onBtnSwapClick() { 
-  const inputLeftValue = inputLeftRef.value;
-  const inputRightValue = inputRightRef.value;
+// function onBtnSwapClick() {
+//   const inputLeftValue = inputLeftRef.value;
+//   const inputRightValue = inputRightRef.value;
 
-  inputLeftRef.value = inputRightValue;
-  inputRightRef.value = inputLeftValue;
-  
-}
+//   inputLeftRef.value = inputRightValue;
+//   inputRightRef.value = inputLeftValue;
 
+// }
 
 //TODO:==============================================
 /*
@@ -43,6 +41,20 @@ function onBtnSwapClick() {
 "Розкрити", при повторному натисканні текст знову стає доступним
 і кнопка набуває початкового вигляду.
 */
+const inputEl = document.querySelector("#passwordInput");
+const btnEl = document.querySelector("#passwordButton");
+
+btnEl.addEventListener("click", onBtnClick);
+
+function onBtnClick() {
+  if (btnEl.textContent === "Приховати") {
+    inputEl.setAttribute("type", "password");
+    btnEl.textContent = "Розкрити";
+  } else {
+    inputEl.setAttribute("type", "text");
+    btnEl.textContent = "Приховати";
+  }
+}
 
 //TODO:==============================================
 /*
@@ -72,5 +84,3 @@ https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/MouseEvent
 https://developer.mozilla.org/ru/docs/Web/API/MouseEvent/pageX
 https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY
 */
-
-
